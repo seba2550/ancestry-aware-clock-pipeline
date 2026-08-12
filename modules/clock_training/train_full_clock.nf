@@ -13,7 +13,6 @@ process TRAIN_FULL_CLOCK {
 
     script:
     """
-    unset PYTHONHOME PYTHONPATH
     train_full_clock.py \
         --input-prefix clock_combined_full \
         --alpha ${params.alpha} \

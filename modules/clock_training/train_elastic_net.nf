@@ -11,7 +11,6 @@ process TRAIN_ELASTIC_NET {
 
     script:
     """
-    unset PYTHONHOME PYTHONPATH
     train_elastic_net.py \
         --input-prefix clock_combined_full \
         --ratio ${ratio} \
