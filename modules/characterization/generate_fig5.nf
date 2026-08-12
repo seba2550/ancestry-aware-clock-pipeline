@@ -14,9 +14,15 @@ process GENERATE_FIG5 {
 
     script:
     """
-    generate_fig5.R \
-        --comp-coefs ${comp_coefs} \
-        --learning-coefs learning_coefs.csv \
+    generate_fig5.R \\
+        --comp-coefs ${comp_coefs} \\
+        --learning-coefs learning_coefs.csv \\
         --output-dir .
+    """
+
+    stub:
+    """
+    touch Figure5.pdf
+    touch Figure5.png
     """
 }

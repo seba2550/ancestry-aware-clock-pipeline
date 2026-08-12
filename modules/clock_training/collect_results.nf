@@ -14,7 +14,6 @@ process COLLECT_TRAINING_RESULTS {
 
     script:
     """
-    unset PYTHONHOME PYTHONPATH
     python3 -c "
 import pandas as pd
 import glob
@@ -39,5 +38,11 @@ if sum_dfs:
     master_sum = pd.concat(sum_dfs, ignore_index=True)
     master_sum.to_csv('Composition_summary.csv', index=False)
 "
+    """
+
+    stub:
+    """
+    touch composition_v2_coefs.csv
+    touch Composition_summary.csv
     """
 }

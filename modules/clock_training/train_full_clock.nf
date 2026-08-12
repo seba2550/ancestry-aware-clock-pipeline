@@ -13,11 +13,17 @@ process TRAIN_FULL_CLOCK {
 
     script:
     """
-    train_full_clock.py \
-        --input-prefix clock_combined_full \
-        --alpha ${params.alpha} \
-        --lambda-opt ${params.fixed_lambda} \
-        --output-coefs full_clock_coef.csv \
+    train_full_clock.py \\
+        --input-prefix clock_combined_full \\
+        --alpha ${params.alpha} \\
+        --lambda-opt ${params.fixed_lambda} \\
+        --output-coefs full_clock_coef.csv \\
         --output-summary full_clock_summary.csv
+    """
+
+    stub:
+    """
+    touch full_clock_coef.csv
+    touch full_clock_summary.csv
     """
 }

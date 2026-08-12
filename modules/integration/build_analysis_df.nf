@@ -13,11 +13,16 @@ process BUILD_ANALYSIS_DF {
 
     script:
     """
-    build_analysis_df.R \
-        --v2-merged v2_merged_input.csv \
-        --custom-predictions predictions_input.csv \
-        --prs-csv prs_csv_input.csv \
-        --ancestry-txt ancestry_txt_input.txt \
+    build_analysis_df.R \\
+        --v2-merged v2_merged_input.csv \\
+        --custom-predictions predictions_input.csv \\
+        --prs-csv prs_csv_input.csv \\
+        --ancestry-txt ancestry_txt_input.txt \\
         --output-rds analysis_ready.rds
+    """
+
+    stub:
+    """
+    touch analysis_ready.rds
     """
 }

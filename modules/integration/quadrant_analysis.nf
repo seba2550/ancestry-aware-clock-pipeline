@@ -16,4 +16,9 @@ process QUADRANT_ANALYSIS {
         --analysis-rds ${analysis_df} \\
         --output-csv quadrant_concordance_stats.csv
     """
+
+    stub:
+    """
+    touch quadrant_concordance_stats.csv
+    """
 }

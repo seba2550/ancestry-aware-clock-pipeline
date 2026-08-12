@@ -22,4 +22,10 @@ process EVALUATE_CLOCKS {
         --output-predictions magenta_all_predicted_ages_and_acceleration.csv \\
         --output-summary composition_evaluation_summary.csv
     """
+
+    stub:
+    """
+    touch magenta_all_predicted_ages_and_acceleration.csv
+    touch composition_evaluation_summary.csv
+    """
 }

@@ -14,9 +14,9 @@ process CHARACTERIZE_CPGS {
 
     script:
     """
-    characterize_cpgs.R \
-        --comp-coefs ${comp_coefs} \
-        --learning-coefs learning_coefs.csv \
+    characterize_cpgs.R \\
+        --comp-coefs ${comp_coefs} \\
+        --learning-coefs learning_coefs.csv \\
         --output-dir .
 
     for f in cpg_*.csv cpg_*.rds gene_*.csv gene_*.rds annotated_*.csv delta_beta_*.csv; do
@@ -28,5 +28,11 @@ process CHARACTERIZE_CPGS {
     if [ -f "core_genes.csv" ]; then
         cp core_genes.csv core_genes_custom.csv
     fi
+    """
+
+    stub:
+    """
+    touch cpg_characterization_stats.csv
+    touch core_genes_custom.csv
     """
 }

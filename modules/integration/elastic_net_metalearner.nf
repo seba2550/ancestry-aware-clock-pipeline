@@ -16,4 +16,9 @@ process ELASTIC_NET_METALEARNER {
         --analysis-rds ${analysis_df} \\
         --output-weights metalearner_feature_weights.csv
     """
+
+    stub:
+    """
+    touch metalearner_feature_weights.csv
+    """
 }

@@ -16,4 +16,9 @@ process LOGISTIC_MODELS {
         --analysis-rds ${analysis_df} \\
         --output-csv primary_logistic_models.csv
     """
+
+    stub:
+    """
+    touch primary_logistic_models.csv
+    """
 }

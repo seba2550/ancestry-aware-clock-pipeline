@@ -16,4 +16,9 @@ process STRATIFIED_MODELS {
         --analysis-rds ${analysis_df} \\
         --output-csv stratified_logistic_models.csv
     """
+
+    stub:
+    """
+    touch stratified_logistic_models.csv
+    """
 }

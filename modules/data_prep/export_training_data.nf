@@ -22,4 +22,12 @@ process EXPORT_TRAINING_DATA {
         --afr-meta ${afr_meta} \\
         --output-prefix clock_combined_full
     """
+
+    stub:
+    """
+    touch clock_combined_full_X.bin
+    touch clock_combined_full_X_dims.txt
+    touch clock_combined_full_y.csv
+    touch clock_combined_full_cpg_names.txt
+    """
 }

@@ -11,15 +11,21 @@ process TRAIN_ELASTIC_NET {
 
     script:
     """
-    train_elastic_net.py \
-        --input-prefix clock_combined_full \
-        --ratio ${ratio} \
-        --eur-frac ${eur_frac} \
-        --iteration ${iter_idx} \
-        --seed ${seed} \
-        --alpha ${params.alpha} \
-        --lambda-opt ${params.fixed_lambda} \
-        --output-coefs Composition_${ratio}_iter${iter_idx}_coef.csv \
+    train_elastic_net.py \\
+        --input-prefix clock_combined_full \\
+        --ratio ${ratio} \\
+        --eur-frac ${eur_frac} \\
+        --iteration ${iter_idx} \\
+        --seed ${seed} \\
+        --alpha ${params.alpha} \\
+        --lambda-opt ${params.fixed_lambda} \\
+        --output-coefs Composition_${ratio}_iter${iter_idx}_coef.csv \\
         --output-summary summary_${ratio}_iter${iter_idx}.csv
+    """
+
+    stub:
+    """
+    touch Composition_${ratio}_iter${iter_idx}_coef.csv
+    touch summary_${ratio}_iter${iter_idx}.csv
     """
 }
