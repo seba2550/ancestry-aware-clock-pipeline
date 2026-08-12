@@ -9,7 +9,7 @@
 
 This pipeline accompanies the manuscript:
 
-> **Gonzalez, S.** & Capra, J.A. *Portable and Ancestry-Balanced Epigenetic Clocks for Cross-Population Aging and Alzheimer's Disease Risk Prediction.* (2026)
+> *Training DNA Methylation Clocks on Individuals from Multiple Ancestries Increases Generalizability.* (In preparation)
 
 It fully automates the analysis from raw GEO-deposited methylation data through trained elastic net clocks, CpG characterization, independent cohort validation, and multivariable AD risk modeling — producing all manuscript figures, tables, and statistical outputs.
 
@@ -17,7 +17,7 @@ It fully automates the analysis from raw GEO-deposited methylation data through 
 
 ## Table of Contents
 
-- [Why This Pipeline?](#why-this-pipeline)
+- [Why Do We Need a Nextflow Pipeline?](#why-do-we-need-a-nextflow-pipeline)
 - [Pipeline Overview](#pipeline-overview)
 - [Quick Start](#quick-start)
 - [Full Production Run](#full-production-run)
@@ -32,9 +32,9 @@ It fully automates the analysis from raw GEO-deposited methylation data through 
 
 ---
 
-## Why This Pipeline?
+## Why Do We Need a Nextflow Pipeline?
 
-Epigenetic clock studies are notoriously difficult to reproduce: they depend on specific software versions, large multi-ethnic datasets, and dozens of sequential analytical steps. This pipeline addresses that by:
+Many bioinformatics studies are notoriously difficult to reproduce: there are dozens of specific software versions to keep track of, incompatibilities between them and with your specific compute, datasets live in very disparate repositories and are processed differently, and there are a myriad of sequential analytical steps to run. With this pipeline I wanted to address that by:
 
 - **Full containerization** — Every process runs inside versioned Docker/Singularity containers with pinned dependencies.
 - **Scatter-gather parallelism** — Bootstrap training across 5 ancestry composition ratios scales from a laptop to a SLURM cluster with zero code changes.
