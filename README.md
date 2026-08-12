@@ -324,24 +324,6 @@ ancestry-aware-clock-pipeline/
 
 ---
 
-## Citation
-
-If you use this pipeline or adapt it for your work, please cite:
-
-```bibtex
-@software{gonzalez2026ancestry,
-  author    = {Gonzalez, Sebastian and Capra, John A.},
-  title     = {Ancestry-Aware Epigenetic Clock Pipeline},
-  year      = {2026},
-  url       = {https://github.com/seba2550/ancestry-aware-clock-pipeline},
-  version   = {1.0.0}
-}
-```
-
-See [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
-
----
-
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
@@ -350,4 +332,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Authors
 
-- **Sebastian Gonzalez** — [Capra Lab](https://capralab.org), University of California, San Francisco
+- **Sebastián Cruz-González** — [Capra Lab](https://capralab.org), University of California, San Francisco
