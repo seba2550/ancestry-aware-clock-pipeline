@@ -1,0 +1,26 @@
+# Default Parameters for Ancestry-Aware Methylation Clock Pipeline
+
+# Data Download Accessions & Input Directives
+geo_eur_accession: "GSE55763"
+geo_afr_accession: "GSE210255"
+geo_magenta_accession: "GSE338167"
+outdir: "./results"
+
+# Filtering & Split Options
+age_min: 19.0
+age_max: 78.0
+train_split_ratio: 0.80
+
+# Training Hyperparameters
+alpha: 0.5
+n_bootstrap: 50
+fixed_lambda: 0.010474566337054866
+cv_folds: 10
+
+# meQTL Filter Assets
+meqtl_cosmo: "${projectDir}/assets/meqtl_lists/cosmo_meqtls.csv"
+meqtl_genoa: "${projectDir}/assets/meqtl_lists/genoa_meqtls.csv"
+meqtl_epigen: "${projectDir}/assets/meqtl_lists/epigen_meqtls.csv"
+
+# PRS Weights Asset
+prs_weights: "${projectDir}/assets/prs_weights/PGS003958_hmPOS_GRCh37.txt"

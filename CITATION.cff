@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Ancestry-Aware Epigenetic Clock Pipeline"
+abstract: "A portable, reproducible, and ancestral composition-balanced epigenetic clock pipeline implemented in Nextflow DSL2. Enables training, evaluation, and cross-ancestry benchmarking of DNA methylation aging models."
+authors:
+  - family-names: "Gonzalez"
+    given-names: "Sebastian"
+    affiliation: "Capra Lab, University of California, San Francisco"
+  - name: "Capra Lab"
+    website: "https://capralab.org"
+version: "1.0.0"
+date-released: "2026-08-05"
+repository-code: "https://github.com/seba2550/ancestry-aware-clock-pipeline"
+url: "https://github.com/seba2550/ancestry-aware-clock-pipeline"
+license: "MIT"
+keywords:
+  - "epigenetics"
+  - "dna-methylation"
+  - "epigenetic-clock"
+  - "genetic-ancestry"
+  - "population-genetics"
+  - "nextflow"
+  - "bioinformatics-pipeline"
+  - "aging"
